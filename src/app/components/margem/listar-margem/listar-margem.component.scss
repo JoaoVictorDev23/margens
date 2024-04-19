@@ -1,0 +1,60 @@
+.filter-container {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+
+}
+nb-select {
+  margin-right: 1rem; /* Espaçamento entre o select e o input */
+}
+.table-container {
+  overflow-x: auto;
+}
+
+
+.responsive-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.responsive-table th,
+.responsive-table td {
+  border: 1px solid #e2dfdf;
+  padding: 8px;
+}
+
+/* Adjust the size of the table cells based on screen size */
+@media screen and (max-width: 768px) {
+  .responsive-table th,
+  .responsive-table td {
+    font-size: 12px;
+  }
+  nb-select {
+    margin-right: 0; /* Remover a margem direita em telas menores */
+    margin-bottom: 0.5rem; /* Adicionar margem inferior menor em telas menores */
+  }
+
+}
+
+
+.loading-spinner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(216, 219, 212, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Adicionado para organizar os itens em uma linha */
+}
+
+p {
+  margin-top: 10px;
+  font-size: 14px;
+}

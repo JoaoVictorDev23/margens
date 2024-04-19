@@ -1,0 +1,42 @@
+// Logo responsivo
+.logo {
+  width: 100%; // Logo ajusta automaticamente a largura
+  max-width: 12rem; // Limita a largura máxima para evitar que a imagem fique muito grande em telas maiores
+}
+
+// Espaçamento uniforme entre os elementos do cabeçalho
+.header-content {
+  display: flex; // Torna os elementos filhos flexíveis
+  justify-content: space-between; // Distribui os elementos uniformemente ao longo do cabeçalho
+  align-items: center; // Alinha os elementos verticalmente no centro
+}
+
+// Estilo do nbUser na extremidade direita do cabeçalho
+.user-right {
+  margin-left: auto; // Move o nbUser para a extremidade direita do cabeçalho
+
+}
+
+// Menu lateral responsivo
+.sidebar {
+  border-right: 1px solid rgb(228, 222, 222);
+  transition: width 0.3s ease; // Adiciona uma transição suave para o efeito de toggle
+  &.sidebar-expanded {
+    width: 250px; // Largura do menu lateral expandido
+  }
+  @media (max-width: 767px) {
+    overflow: hidden;
+  }
+}
+
+// Header responsivo
+@media (max-width: 767px) {
+  .header-content {
+    flex-direction: column; // Alinha os elementos verticalmente
+    align-items: flex-start; // Alinha os elementos à esquerda
+  }
+
+  .logo {
+    margin-bottom: 1rem; // Adiciona espaço entre o logotipo e o nbUser
+  }
+}
