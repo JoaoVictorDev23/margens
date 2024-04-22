@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NbToastrService } from '@nebular/theme';
+import { ValoresMargem } from 'src/app/interface/ValoresMargem';
 import { Margem } from 'src/app/interface/margem';
 import { MargemService } from 'src/app/services/margem.service';
 
@@ -26,8 +27,34 @@ export class CadastrarMargemComponent {
     origem:"",
     destino:"",
     margem:0,
+    margemAgr:0,
+    kilometragem:0,
+    pesoTon:0,
+    frete:0,
+    icms:0,
     observacao:""
 
+  }
+  valores: ValoresMargem = {
+    fe:0,
+    fm:0,
+
+    feTruck:0,
+    fmTruck:0,
+
+    feBitrem:0,
+    fmBitrem:0,
+
+    feCarreta:0,
+    fmCarreta:0,
+
+    feGranel:0,
+    fmGranel:0,
+
+    feRodotrem:0,
+    fmRodotrem:0,
+
+    idMargem:""
   }
   todosCamposSelecionados(): boolean {
     return (
@@ -38,6 +65,11 @@ export class CadastrarMargemComponent {
       this.margem.origem !== "" &&
       this.margem.observacao !== ""
     );
+  }
+  calcularIcms(frete: number): number {
+    const icmsPercentual = 0.88;
+    const icms = frete * icmsPercentual;
+    return icms;
   }
 
   cadastrarMargem():void {

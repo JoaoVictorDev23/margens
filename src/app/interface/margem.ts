@@ -6,5 +6,11 @@ export interface Margem{
   origem: String;
   destino: String;
   margem: Number;
+  margemAgr:Number;
+  kilometragem:Number;
+  pesoTon:Number;
+  frete:Number;
+  icms: Number;
+
   observacao: String;
 }

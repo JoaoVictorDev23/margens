@@ -22,8 +22,8 @@
             </div>
             <div class="row-container">
               <div style="display: flex; align-items: center;">
-                <label class="label" for="margem" style="width: 100px;">Margem:</label>
-                <input [(ngModel)]="margem.margem" name="margem" shape="semi-round" nbInput fullWidth type="text">
+                <label class="label" for="margem" style="width: 100px;">Margem TAC(%):</label>
+                <input [(ngModel)]="margem.margem" name="margem" shape="semi-round" nbInput fullWidth type="number">
               </div>
             </div>
           </div>
@@ -41,6 +41,12 @@
               <div style="display: flex; align-items: center;">
                 <label class="label" for="destino" style="width: 100px;">Destino:</label>
                 <input [(ngModel)]="margem.destino" name="destino" shape="semi-round" nbInput fullWidth type="text">
+              </div>
+            </div>
+            <div class="row-container">
+              <div style="display: flex; align-items: center;">
+                <label class="label" for="margem" style="width: 100px;">Margem AGR(%):</label>
+                <input [(ngModel)]="margem.margemAgr" name="margem" shape="semi-round" nbInput fullWidth type="number">
               </div>
             </div>
           </div>
