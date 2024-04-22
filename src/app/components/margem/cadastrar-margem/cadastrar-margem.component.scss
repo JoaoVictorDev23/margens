@@ -1,4 +1,4 @@
-$base-height: 470px; // Defina a altura fixa desejada
+$base-height: 630px; // Defina a altura fixa desejada
 
 nb-card {
   width: 50%;
@@ -14,9 +14,10 @@ nb-card {
   }
 }
 .row-container {
-  margin-bottom: 15px; // Adiciona um espaçamento na parte inferior de cada linha
+  margin-bottom: 10px; // Adiciona um espaçamento na parte inferior de cada linha
 }
 .container {
+  margin-bottom: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +27,7 @@ nb-card {
 .custom-textarea {
   resize: none; // Impede a redimensionamento
   max-width: 100%; // Largura máxima
-  max-height: 120px; // Altura máxima (ajuste conforme necessário)
+  max-height: 100px; // Altura máxima (ajuste conforme necessário)
 
   // Estilos adicionais, se necessário
   padding: 10px;

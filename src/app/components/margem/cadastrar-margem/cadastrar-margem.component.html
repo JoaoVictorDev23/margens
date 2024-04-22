@@ -4,65 +4,100 @@
       <label for="label" class="label" style="font-size: 18px; font-weight: bold;">Cadastro de Margem</label>
     </nb-card-header>
     <nb-card-body>
-      <form>
-        <div style="display: flex;">
-          <!-- Coluna esquerda -->
-          <div style="flex: 1; margin-right: 10px;">
-            <div class="row-container">
-              <div style="display: flex; align-items: center;">
-                <label class="label" for="linha" style="width: 100px;">Linha:</label>
-                <input [(ngModel)]="margem.linha" name="linha" shape="semi-round" nbInput fullWidth type="text">
+      <nb-stepper orientation="horizontal">
+        <nb-step label="First step">
+          <form>
+            <div style="display: flex;">
+              <!-- Coluna esquerda -->
+              <div style="flex: 1; margin-right: 10px;">
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="linha" style="width: 100px;">Linha:</label>
+                    <input [(ngModel)]="margem.linha" name="linha" shape="semi-round" nbInput fullWidth type="text">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="cliente" style="width: 100px;">Cliente:</label>
+                    <input [(ngModel)]="margem.cliente" name="cliente" shape="semi-round" nbInput fullWidth type="text">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="margem" style="width: 100px;">Margem TAC(%):</label>
+                    <input [(ngModel)]="margem.margem" name="margem" shape="semi-round" nbInput fullWidth type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="margem" style="width: 100px;">Distância (KM):</label>
+                    <input [(ngModel)]="margem.margem" name="margem" shape="semi-round" nbInput fullWidth type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="margem" style="width: 100px;">Peso(Ton):</label>
+                    <input [(ngModel)]="margem.margem" name="margem" shape="semi-round" nbInput fullWidth type="number">
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="row-container">
-              <div style="display: flex; align-items: center;">
-                <label class="label" for="cliente" style="width: 100px;">Cliente:</label>
-                <input [(ngModel)]="margem.cliente" name="cliente" shape="semi-round" nbInput fullWidth type="text">
-              </div>
-            </div>
-            <div class="row-container">
-              <div style="display: flex; align-items: center;">
-                <label class="label" for="margem" style="width: 100px;">Margem TAC(%):</label>
-                <input [(ngModel)]="margem.margem" name="margem" shape="semi-round" nbInput fullWidth type="number">
-              </div>
-            </div>
-          </div>
 
-          <!-- Coluna direita -->
-          <div style="flex: 1;">
-            <div class="row-container">
-              <div style="display: flex; align-items: center;">
-                <label class="label" for="origem" style="width: 100px;">Origem:</label>
-                <input [(ngModel)]="margem.origem" name="origem" shape="semi-round" nbInput fullWidth type="text">
-              </div>
-            </div>
 
-            <div class="row-container">
-              <div style="display: flex; align-items: center;">
-                <label class="label" for="destino" style="width: 100px;">Destino:</label>
-                <input [(ngModel)]="margem.destino" name="destino" shape="semi-round" nbInput fullWidth type="text">
-              </div>
-            </div>
-            <div class="row-container">
-              <div style="display: flex; align-items: center;">
-                <label class="label" for="margem" style="width: 100px;">Margem AGR(%):</label>
-                <input [(ngModel)]="margem.margemAgr" name="margem" shape="semi-round" nbInput fullWidth type="number">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="form-group">
-            <label class="label" for="observacao" class="label">Observações</label>
-          </div>
-        </div>
-        <textarea rows="5" nbInput fullWidth name="observacao" shape="round" id="observacao" placeholder="" name="observacao"
-        required  nbInput class="custom-textarea" [(ngModel)]="margem.observacao"></textarea>
-        <!-- botao de continuar-->
-        <button nbButton status="success" fullWidth outline shape="semi-round" class="button-step2"
-        (click)="cadastrarMargem()"[disabled]="!todosCamposSelecionados()" >Cadastrar</button>
+              <!-- Coluna direita -->
+              <div style="flex: 1;">
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="origem" style="width: 100px;">Origem:</label>
+                    <input [(ngModel)]="margem.origem" name="origem" shape="semi-round" nbInput fullWidth type="text">
+                  </div>
+                </div>
 
-      </form>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="destino" style="width: 100px;">Destino:</label>
+                    <input [(ngModel)]="margem.destino" name="destino" shape="semi-round" nbInput fullWidth type="text">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="margem" style="width: 100px;">Margem AGR(%):</label>
+                    <input [(ngModel)]="margem.margemAgr" name="margem" shape="semi-round" nbInput fullWidth
+                      type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="margem" style="width: 100px;">Frete:</label>
+                    <input [(ngModel)]="margem.margemAgr" name="margem" shape="semi-round" nbInput fullWidth
+                      type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="margem" style="width: 100px;">ICMS:</label>
+                    <input [(ngModel)]="margem.margemAgr" name="margem" shape="semi-round" nbInput fullWidth
+                      type="number">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="label" for="observacao" class="label">Observações</label>
+              </div>
+            </div>
+            <textarea rows="5" nbInput fullWidth name="observacao" shape="round" id="observacao" placeholder=""
+              name="observacao" required nbInput class="custom-textarea" [(ngModel)]="margem.observacao"></textarea>
+            <!-- botao de continuar-->
+            <button nbButton status="info" fullWidth outline shape="semi-round" class="button-step2"
+            nbStepperNext [disabled]="!todosCamposSelecionados()">Continuar</button>
+
+          </form>
+        </nb-step>
+        <nb-step>
+
+        </nb-step>
+      </nb-stepper>
     </nb-card-body>
   </nb-card>
 </div>
