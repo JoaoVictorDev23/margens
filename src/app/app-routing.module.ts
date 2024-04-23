@@ -24,7 +24,6 @@ const routes: Routes = [ {
   },
   {
     path:'', component:SidenavComponent,
-    canActivate:[AuthGuard],
     children:[
       {path: 'home',component: HomeComponent},
       {path:'margem/cadastrar',component: CadastrarMargemComponent},

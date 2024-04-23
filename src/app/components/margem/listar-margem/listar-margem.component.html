@@ -19,7 +19,7 @@
     <!--  Cliente Column -->
     <ng-container matColumnDef="cliente">
       <th mat-header-cell *matHeaderCellDef> Cliente </th>
-      <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.margemDto.cliente}} </td>
     </ng-container>
 
 
@@ -27,36 +27,36 @@
     <!-- Linha Column -->
     <ng-container matColumnDef="linha">
       <th mat-header-cell *matHeaderCellDef> Linha </th>
-      <td mat-cell *matCellDef="let element"> {{element.linha}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.margemDto.linha}} </td>
     </ng-container>
 
     <!-- Origem Column -->
     <ng-container matColumnDef="origem">
       <th mat-header-cell *matHeaderCellDef> Origem </th>
-      <td mat-cell *matCellDef="let element"> {{element.origem}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.margemDto.origem}} </td>
     </ng-container>
 
     <!-- Destino Column -->
     <ng-container matColumnDef="destino">
       <th mat-header-cell *matHeaderCellDef> Destino </th>
-      <td mat-cell *matCellDef="let element"> {{element.destino}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.margemDto.destino}} </td>
     </ng-container>
 
     <!-- Margem Column -->
     <ng-container matColumnDef="margem">
       <th mat-header-cell *matHeaderCellDef> Margem </th>
-      <td mat-cell *matCellDef="let element"> {{element.margem}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.margemDto.margem}} </td>
     </ng-container>
 
     <!-- Observação Column -->
     <ng-container matColumnDef="observacao">
       <th mat-header-cell *matHeaderCellDef> Observação </th>
-      <td mat-cell *matCellDef="let element"> {{element.observacao}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.margemDto.observacao}} </td>
     </ng-container>
-    ]
+
     <!-- Ações Column -->
     <ng-container matColumnDef="acoes">
-      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <th mat-header-cell *matHeaderCellDef > Ações </th>
       <td mat-cell *matCellDef="let element">
         <button nbButton (click)="openDialog(element)" size="small" status="warning"
           style="padding:5px; margin-right: 3px;" outline>
@@ -65,10 +65,10 @@
         <!-- <button nbButton  (click)="openDialogExcluir(element)"size="small" status="danger"  style="padding:5px; margin-right: 3px;"  outline>
         <nb-icon icon="trash-2-outline" ></nb-icon>
       </button>-->
-        <button nbButton (click)="openDialogAtualizar(element)" size="small" status="info"
+       <!-- <button nbButton (click)="openDialogAtualizar(element)" size="small" status="info"
           style="padding:5px; margin-right: 3px;" outline>
           <nb-icon icon="edit-2-outline"></nb-icon>
-        </button>
+        </button>-->
       </td>
     </ng-container>
 

@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { ModalmargemviewComponent } from '../../modal/modalmargemview/modalmargemview.component';
 import { ModalmargemexcluirComponent } from '../../modal/modalmargemexcluir/modalmargemexcluir.component';
 import { ModalmargemeditarComponent } from '../../modal/modalmargemeditar/modalmargemeditar.component';
-import { Margem } from 'src/app/interface/margem';
+import { Margem } from 'src/app/interface/margemDto';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
@@ -10,6 +10,7 @@ import { NbToastrService } from '@nebular/theme';
 import { MargemService } from 'src/app/services/margem.service';
 import { Router } from '@angular/router';
 import { MatTableDataSource } from '@angular/material/table';
+import { MargemCompleta } from 'src/app/interface/CriarMargemDto';
 
 @Component({
   selector: 'app-listar-margem',
@@ -22,9 +23,9 @@ export class ListarMargemComponent implements AfterViewInit {
     loading: boolean = true; // Variável para controlar o estado de carregamento
     selectedFilter: string | null = null;
 
-    margens: Margem[] = [];
-    dataSource = new MatTableDataSource<Margem>(this.margens);
-    displayedColumns: string[] = ['cliente', 'origem', 'destino','margem','observacao'];
+    margens: MargemCompleta[] = [];
+    dataSource = new MatTableDataSource<MargemCompleta>(this.margens);
+    displayedColumns: string[] = ['cliente', 'origem', 'destino','margem','observacao','acoes'];
 
     @ViewChild(MatPaginator) paginator!: MatPaginator;
     @ViewChild(MatSort) sort!: MatSort;
@@ -77,7 +78,7 @@ export class ListarMargemComponent implements AfterViewInit {
 
     margemList(){
       this.margemService.margemList().subscribe(
-        (data:Margem[]| null) => {
+        (data:MargemCompleta[]| null) => {
           try{
             if(data){
               this.margens = data;
@@ -104,21 +105,21 @@ export class ListarMargemComponent implements AfterViewInit {
 
 
 
-    openDialog(margem: Margem) {
-      const dialogRef = this.dialog.open(ModalmargemviewComponent, { data: { margem:'2'  } });
+    openDialog(margem: MargemCompleta) {
+      const dialogRef = this.dialog.open(ModalmargemviewComponent, { data: { margem} });
       dialogRef.afterClosed().subscribe(result => {
         console.log(`Dialog result: ${result}`);
       });
     }
 
-    openDialogExcluir(margem: Margem) {
+    openDialogExcluir(margem: MargemCompleta) {
       const dialogRef = this.dialog.open(ModalmargemexcluirComponent, { data: { margem:'2'  } });
       dialogRef.afterClosed().subscribe(result => {
         console.log(`Dialog result: ${result}`);
       });
     }
 
-    openDialogAtualizar(margem: Margem) {
+    openDialogAtualizar(margem: MargemCompleta) {
       const dialogRef = this.dialog.open(ModalmargemeditarComponent, { data: { margem: '2' } });
       dialogRef.afterClosed().subscribe(result => {
         console.log(`Dialog result: ${result}`);

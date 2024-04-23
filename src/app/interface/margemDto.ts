@@ -9,7 +9,7 @@ export interface Margem{
   margemAgr:Number;
   kilometragem:Number;
   pesoTon:Number;
-  frete:Number;
+  frete:number;
   icms: Number;
 
   observacao: String;

@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AuthService } from './authservice.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Margem } from '../interface/margem';
+import { Margem } from '../interface/margemDto';
 import { Observable } from 'rxjs';
 import { API_CONFIG } from '../config/api.config';
+import { MargemCompleta } from '../interface/CriarMargemDto';
 
 @Injectable({
   providedIn: 'root'
@@ -19,12 +20,12 @@ export class MargemService {
 
   }
 
-  cadastrarMargem(margem:Margem): Observable<Margem>{
+  cadastrarMargem(margem:MargemCompleta): Observable<MargemCompleta>{
     if(!this.authToken){
       throw new Error ('Token JWT não encontrado, refaça o Login!');
     }
     const Headers = new HttpHeaders().set('Authorization', `Bearer ${this.authToken}`);
-    return this.http.post<Margem>(`${this.apiUrl}/criar`, margem, { headers: Headers } )
+    return this.http.post<MargemCompleta>(`${this.apiUrl}/criar`, margem, { headers: Headers } )
 
   }
   private getHeaders(): HttpHeaders {
@@ -37,10 +38,10 @@ export class MargemService {
     return new HttpHeaders().set('Authorization', `Bearer ${this.authToken}`);
   }
 
-  margemList(): Observable<Margem[]>{
+  margemList(): Observable<MargemCompleta[]>{
     const Headers = new HttpHeaders().set('Authorization', `Bearer ${this.authToken}`);
     console.log(Headers);
 
-    return this.http.get<Margem[]>(`${this.apiUrl}`, {headers: this.getHeaders()})
+    return this.http.get<MargemCompleta[]>(`${this.apiUrl}`, {headers: this.getHeaders()})
   }
 }

@@ -61,6 +61,8 @@ import { ListarMargemComponent } from './components/margem/listar-margem/listar-
 import { ModalmargemviewComponent } from './components/modal/modalmargemview/modalmargemview.component';
 import { ModalmargemexcluirComponent } from './components/modal/modalmargemexcluir/modalmargemexcluir.component';
 import { ModalmargemeditarComponent } from './components/modal/modalmargemeditar/modalmargemeditar.component';
+import { SubmodalDadosmargemComponent } from './components/modal/modal/submodal-dadosmargem/submodal-dadosmargem.component';
+import { SubmodalValoresmargemComponent } from './components/modal/modal/submodal-dadosmargem/submodal-valoresmargem/submodal-valoresmargem.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +75,8 @@ import { ModalmargemeditarComponent } from './components/modal/modalmargemeditar
     ModalmargemviewComponent,
     ModalmargemexcluirComponent,
     ModalmargemeditarComponent,
+    SubmodalDadosmargemComponent,
+    SubmodalValoresmargemComponent,
 
 
 

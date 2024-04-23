@@ -5,19 +5,15 @@ import { MargemCompleta } from 'src/app/interface/CriarMargemDto';
 import { ServiceUsuarioService } from 'src/app/services/service-usuario.service';
 
 @Component({
-  selector: 'app-modalmargemview',
-  templateUrl: './modalmargemview.component.html',
-  styleUrls: ['./modalmargemview.component.scss']
+  selector: 'app-submodal-dadosmargem',
+  templateUrl: './submodal-dadosmargem.component.html',
+  styleUrls: ['./submodal-dadosmargem.component.scss']
 })
-export class ModalmargemviewComponent {
-  constructor(private dialogRef: MatDialogRef<ModalmargemviewComponent>,
+export class SubmodalDadosmargemComponent {
+
+  constructor(private dialogRef: MatDialogRef<SubmodalDadosmargemComponent>,
     private toastrService: NbToastrService,private userService: ServiceUsuarioService,
-    @Inject(MAT_DIALOG_DATA) public data: { margem: MargemCompleta } ) {
-      console.log(data);
+    @Inject(MAT_DIALOG_DATA) public data: { margemCompleta: MargemCompleta } ) {
 
      }
-     voltar(): void {
-      this.dialogRef.close();
-    }
-
 }
