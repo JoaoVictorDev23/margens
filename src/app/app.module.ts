@@ -56,13 +56,10 @@ import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { CadastrarMargemComponent } from './components/margem/cadastrar-margem/cadastrar-margem.component';
-import { ListarMargemComponent } from './components/margem/listar-margem/listar-margem.component';
-import { ModalmargemviewComponent } from './components/modal/modalmargemview/modalmargemview.component';
-import { ModalmargemexcluirComponent } from './components/modal/modalmargemexcluir/modalmargemexcluir.component';
-import { ModalmargemeditarComponent } from './components/modal/modalmargemeditar/modalmargemeditar.component';
-import { SubmodalDadosmargemComponent } from './components/modal/modal/submodal-dadosmargem/submodal-dadosmargem.component';
-import { SubmodalValoresmargemComponent } from './components/modal/modal/submodal-dadosmargem/submodal-valoresmargem/submodal-valoresmargem.component';
+
+
+import { CadastrarprocessoComponent } from './components/processos/cadastrar/cadastrarprocesso/cadastrarprocesso.component';
+import { ListarprocessosComponent } from './components/processos/listar/listarprocessos/listarprocessos.component';
 
 @NgModule({
   declarations: [
@@ -70,14 +67,8 @@ import { SubmodalValoresmargemComponent } from './components/modal/modal/submoda
     SidenavComponent,
     UsuarioCadastrarComponent,
     LoginComponent,
-    CadastrarMargemComponent,
-    ListarMargemComponent,
-    ModalmargemviewComponent,
-    ModalmargemexcluirComponent,
-    ModalmargemeditarComponent,
-    SubmodalDadosmargemComponent,
-    SubmodalValoresmargemComponent,
-
+    CadastrarprocessoComponent,
+    ListarprocessosComponent,
 
 
   ],

@@ -1,6 +1,7 @@
-$base-height: 480px; // Defina a altura fixa desejada
+$base-height: 600px; // Defina a altura fixa desejada
 
-mat-tab-group {
+nb-card {
+  width: 65%;
   height: $base-height;
   margin: auto;
 
@@ -9,20 +10,34 @@ mat-tab-group {
   }
 
   @media screen and (max-width: 576px) {
-    width: 90%;
+    width: 100%;
+    height: auto;
+    margin: 1rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 100%;
+    margin: 0.5rem;
   }
 }
+
 .row-container {
   margin-bottom: 10px; // Adiciona um espaçamento na parte inferior de cada linha
 }
+
 .container {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh; /* Define a altura do contêiner como a altura da janela de visualização */
+  height: 100vh; // Define a altura do contêiner como a altura da janela de visualização
 
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    height: auto;
+  }
 }
+
 .custom-textarea {
   resize: none; // Impede a redimensionamento
   max-width: 100%; // Largura máxima
@@ -35,4 +50,7 @@ mat-tab-group {
   margin-bottom: 1rem;
   color:#666363;
 
+  @media screen and (max-width: 576px) {
+    max-height: auto;
+  }
 }

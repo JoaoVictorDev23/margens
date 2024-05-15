@@ -11,6 +11,7 @@
   align-items: center; // Alinha os elementos verticalmente no centro
 }
 
+
 // Estilo do nbUser na extremidade direita do cabeçalho
 .user-right {
   margin-left: auto; // Move o nbUser para a extremidade direita do cabeçalho
@@ -40,3 +41,21 @@
     margin-bottom: 1rem; // Adiciona espaço entre o logotipo e o nbUser
   }
 }
+.sidebar {
+  border-right: 1px solid rgb(228, 222, 222);
+  transition: width 0.3s ease; // Adiciona uma transição suave para o efeito de toggle
+
+  // Define o tamanho reduzido dos componentes do nb-sidebar
+  &.sidebar-expanded {
+    width: 250px; // Largura do menu lateral expandido
+  }
+
+  // Adiciona uma classe para ajustar o tamanho dos componentes do nb-sidebar
+  .smaller-components {
+    width: 90%; // Reduz a largura dos componentes em 10%
+    height: 90%; // Reduz a altura dos componentes em 10%
+    margin-left: 5%; // Adiciona margem à esquerda para manter o alinhamento
+    margin-top: 5%; // Adiciona margem superior para manter o alinhamento
+  }
+}
+

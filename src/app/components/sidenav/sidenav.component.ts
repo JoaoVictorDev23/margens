@@ -14,7 +14,7 @@ import { AuthService } from 'src/app/services/authservice.service';
 })
 export class SidenavComponent {
 
-  toggle() {
+ public toggle() {
     this.sidebarService.toggle(false, 'left');
   }
   items: NbMenuItem[] = [
@@ -29,14 +29,19 @@ export class SidenavComponent {
       icon: 'list-outline',
       children: [
 
-        {title:'Cadastro de Usuário',
-        icon: 'person-add',
-        link: '/usuario'
-       },
        {
         title:'Cadastro de Margem',
         icon:'clipboard-outline',
         link:'/margem/cadastrar'
+       },
+       {title:'Cadastro de Usuário',
+       icon: 'person-add',
+       link: '/usuario'
+      },
+       {
+        title:'Cadastro de Cliente',
+        icon:'clipboard-outline',
+        link:'/cliente/cadastrar'
        }
       ],
     },
@@ -45,7 +50,7 @@ export class SidenavComponent {
       icon: 'file-text-outline',
       children: [
 
-        {title:'Linhas',
+        {title:'Margem',
         icon: 'person-add',
         link: '/margem/listar'
        },

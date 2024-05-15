@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NbToastrService } from '@nebular/theme';
 import { Usuario } from 'src/app/interface/usuario-interface';
+import { SidebarService } from 'src/app/services/sidebarservice/sidenav.service';
 import { ServiceUsuarioService } from 'src/app/services/usuario/service-usuario.service';
 
 @Component({
@@ -9,13 +10,18 @@ import { ServiceUsuarioService } from 'src/app/services/usuario/service-usuario.
   templateUrl: './usuario-cadastrar.component.html',
   styleUrls: ['./usuario-cadastrar.component.scss']
 })
-export class UsuarioCadastrarComponent {
+export class UsuarioCadastrarComponent implements OnInit {
 
   constructor(private usuarioService: ServiceUsuarioService,
-    private toastrService: NbToastrService,private router:Router){
+    private toastrService: NbToastrService,private router:Router,
+    private sidebarService: SidebarService
+  ){
 
   }
 
+  ngOnInit(): void {
+
+  }
   usuario: Usuario = {
     name: "",
     cpf: "",

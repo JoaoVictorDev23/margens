@@ -5,8 +5,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './components/home/home.component';
 import { UsuarioCadastrarComponent } from './components/usuarios/usuario-cadastrar/usuario-cadastrar.component';
-import { CadastrarMargemComponent } from './components/margem/cadastrar-margem/cadastrar-margem.component';
-import { ListarMargemComponent } from './components/margem/listar-margem/listar-margem.component';
+import { CadastrarprocessoComponent } from './components/processos/cadastrar/cadastrarprocesso/cadastrarprocesso.component';
 
 const routes: Routes = [ {
   path: '',
@@ -26,9 +25,8 @@ const routes: Routes = [ {
     path:'', component:SidenavComponent,
     children:[
       {path: 'home',component: HomeComponent},
-      {path:'margem/cadastrar',component: CadastrarMargemComponent},
-      {path:'margem/listar',component:ListarMargemComponent},
       {path:'usuario', component:UsuarioCadastrarComponent},
+      {path:'cadastrarprocesso', component: CadastrarprocessoComponent}
 
 
     ]

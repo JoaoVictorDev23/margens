@@ -14,8 +14,8 @@
   </nb-layout-header>
 
 
-  <nb-sidebar class="sidebar" tag="left">
-    <nb-menu [items]="items"></nb-menu>
+  <nb-sidebar class="sidebar smaller-components"  tag="left">
+    <nb-menu [items]="items"(click)="toggle();" ></nb-menu>
   </nb-sidebar>
 
   <nb-layout-column>

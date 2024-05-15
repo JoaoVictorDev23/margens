@@ -1,0 +1,192 @@
+<div class="container">
+  <nb-card size="medium" style="max-width: 900px;">
+    <nb-card-header style="display: flex; align-self: center;">
+      <label for="label" class="label" style="font-size: 18px; font-weight: bold;">Cadastro de Processo</label>
+    </nb-card-header>
+    <nb-card-body>
+      <nb-stepper orientation="horizontal">
+        <nb-step label="Etapa 1">
+          <form>
+            <div style="display: flex;">
+              <!-- Coluna esquerda -->
+              <div style="flex: 1; margin-right: 10px;">
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="cod" style="width: 100px;">COD:</label>
+                    <input [(ngModel)]="dadosprocessos.cod" name="cod" shape="semi-round" nbInput fullWidth type="text">
+                  </div>
+                </div>
+
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="numeroCnj" style="width: 100px;">Numero CNJ:</label>
+                    <input [(ngModel)]="dadosprocessos.numeroCnj" name="numeroCnj" shape="semi-round" nbInput fullWidth type="text">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="area" style="width: 100px;">Área</label>
+                    <input [(ngModel)]="dadosprocessos.area" name="c" shape="semi-round" nbInput fullWidth
+                      type="text">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="parteCliente" style="width: 100px;">Parte Cliente:</label>
+                    <input [(ngModel)]="dadosprocessos.parteCliente" name="parteCliente" shape="semi-round" nbInput fullWidth
+                      type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="tipoCliente" style="width: 100px;">Tipo Cliente:</label>
+                    <input [(ngModel)]="dadosprocessos.tipoCliente" name="tipoCliente" shape="semi-round" nbInput fullWidth
+                      type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="dataProtocolo" style="width: 100px;">Data Protocolo:</label>
+                    <input [(ngModel)]="dadosprocessos.dataProtocolo" name="dataProtocolo" shape="semi-round" nbInput fullWidth
+                      type="date">
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Coluna direita -->
+              <div style="flex: 1;">
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="origem" style="width: 100px;">Setor</label>
+                    <input [(ngModel)]="dadosprocessos.setor" name="origem" shape="semi-round" nbInput fullWidth type="text">
+                  </div>
+                </div>
+
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="parteAdversa" style="width: 100px;">Parte Adversa:</label>
+                    <input [(ngModel)]="dadosprocessos.parteAdversa" name="parteAdversa" shape="semi-round" nbInput fullWidth type="text">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="objetivo" style="width: 100px;">Objetivo</label>
+                    <input [(ngModel)]="dadosprocessos.objetivo" name="objetivo" shape="semi-round" nbInput fullWidth
+                      type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="Comarca" style="width: 100px;">Comarca:</label>
+                    <input [(ngModel)]="dadosprocessos.comarca" name="Comarca" shape="semi-round"
+                      nbInput fullWidth type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="icms" style="width: 100px;">Instancia</label>
+                    <input [(ngModel)]="dadosprocessos.instancia" name="icms" shape="semi-round" disabled nbInput fullWidth
+                      type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="dataBaixa" style="width: 100px;">Data Baixa:</label>
+                    <input [(ngModel)]="dadosprocessos.dataBaixa" name="dataBaixa" shape="semi-round" nbInput fullWidth
+                      type="date">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- botao de continuar-->
+            <button nbButton status="info" fullWidth outline shape="semi-round" class="button-step2" nbStepperNext style="margin-top:1rem">Continuar</button>
+
+          </form>
+        </nb-step>
+
+        <!-- Step 2-->
+        <nb-step label="Etapa 2">
+          <form>
+            <div style="display: flex;">
+              <!-- Coluna esquerda -->
+              <div style="flex: 1; margin-right: 10px;">
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="Probabilidade" style="width: 100px;margin-right: 1rem;">Probab.:</label>
+                    <input [(ngModel)]="dadosprocessos.probabilidade" name="Probabilidade" shape="semi-round" nbInput fullWidth type="number">
+                  </div>
+                </div>
+
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="riscoEstimado" style="width: 100px;margin-right: 1rem;">Risco Estimado:</label>
+                    <input [(ngModel)]="dadosprocessos.risco.riscoEstimado" name="riscoEstimado" shape="semi-round" nbInput fullWidth type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="riscoMinimo" style="width: 100px;margin-right: 1rem;">Risco Minimo:</label>
+                    <input [(ngModel)]="dadosprocessos.risco.riscoMinimo" name="riscoMinimo" shape="semi-round" nbInput fullWidth
+                      type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="riscoMaximo" style="width: 100px;margin-right: 1rem;">Risco Máximo:</label>
+                    <input [(ngModel)]="dadosprocessos.risco.riscoMaximo" name="feGranel" shape="semi-round" nbInput fullWidth
+                      type="number">
+                  </div>
+                </div>
+
+              </div>
+
+
+              <!-- Coluna direita -->
+              <div style="flex: 1;">
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="classificacao" style="width: 100px;margin-right: 1rem;">Classific.:</label>
+                    <input [(ngModel)]="dadosprocessos.classificacao" name="classificacao" shape="semi-round" nbInput fullWidth type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="riscoPossivel" style="width: 100px;margin-right: 1rem;">Risco Possivel:</label>
+                    <input [(ngModel)]="dadosprocessos.risco.riscoPossivel" name="riscoPossivel" shape="semi-round" nbInput fullWidth
+                      type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="riscoProvavel" style="width: 100px;margin-right: 1rem;">Risco Provavel:</label>
+                    <input [(ngModel)]="dadosprocessos.risco.riscoProvavel" name="riscoProvavel" shape="semi-round" nbInput fullWidth
+                      type="number">
+                  </div>
+                </div>
+                <div class="row-container">
+                  <div style="display: flex; align-items: center;">
+                    <label class="label" for="riscoRemoto" style="width: 100px;margin-right: 1rem;">Risco Remoto:</label>
+                    <input [(ngModel)]="dadosprocessos.risco.riscoRemoto" name="riscoRemoto" shape="semi-round" nbInput fullWidth
+                      type="number">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="label" for="observacao" class="label">Observações</label>
+              </div>
+            </div>
+            <textarea rows="5" nbInput fullWidth name="observacao" shape="round" id="observacao" placeholder=""
+              name="observacao" required nbInput class="custom-textarea" [(ngModel)]="dadosprocessos.observacao"></textarea>
+            <button nbButton status="success" fullWidth outline shape="semi-round" class="button-step2" nbStepperNext style="margin-top:1rem ">Cadastrar</button>
+
+          </form>
+        </nb-step>
+      </nb-stepper>
+    </nb-card-body>
+  </nb-card>
+</div>
